@@ -7,6 +7,7 @@ Usage (recommendation)
 docker-registry 安装
 
 1:基础环境准备
+
  1.1 安装基础
     sudo apt-get install build-essential python-dev libevent-dev python-pip libssl-dev
     sudo pip install liblzma-dev
