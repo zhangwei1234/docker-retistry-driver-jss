@@ -23,17 +23,27 @@ docker-registry 安装
  1.3 mount 磁盘到 /tmp 用于存储临时文件
 
 2:源代码下载 并且安装
+
   2.1 源代码下载
+  
         cd /export/service/ && git clone https://github.com/docker/docker-registry.git
+        
   2.2 安装docker-registry
+  
       cd /export/service/docker-registry/  && sudo python setup.pu install
+      
   2.3 安装jss python sdk
+  
      sudo pip install jss_python
+     
   2.4 安装 docker-registry-driver-jss 驱动
+  
      sudo  pip install docker-registry-driver-jss 
 
 3:修改配置
+
   cd /usr/local/lib/python2.7/dist-packages/docker_registry-0.9.0-py2.7.egg
+  
   修改 config/config.yml  如果config/下无 config.yml 就cp config_sample.yml config.yml
 
   修改后的config.yml------->加粗字体表示启用 jssstorage 驱动
