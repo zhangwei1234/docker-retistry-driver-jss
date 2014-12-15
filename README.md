@@ -17,6 +17,7 @@ docker-registry 安装
     mkdir -p /export/service
     mkdir -p /export/home/jae
     mkdir -p /tmp
+
  1.3 mount 磁盘到 /tmp 用于存储临时文件
 
 2:源代码下载 并且安装
