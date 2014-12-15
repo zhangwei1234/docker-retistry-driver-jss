@@ -49,6 +49,7 @@ docker-registry 安装
   修改后的config.yml------->加粗字体表示启用 jssstorage 驱动
 # All other flavors inherit the `common' config snippet
 common: &common
+
     issue: '"docker-registry server"'
     # Default log level is info
     loglevel: debug
@@ -111,10 +112,12 @@ common: &common
         vary_header: _env:CORS_VARY_HEADER
         resources: _env:CORS_RESOURCES
 local: &local
+
     <<: *common
     storage: local
     storage_path: _env:STORAGE_PATH:/tmp/registry
 jssstorage: &jssstorage
+
     <<: *common
     storage: jssstorage
     jss_bucket: your jss bucket
@@ -123,12 +126,14 @@ jssstorage: &jssstorage
     jss_domain: storage.jcloud.com
 # This is the default configuration when no flavor is specified
 dev: &dev
+
     <<: *jssstorage
     loglevel: _env:LOGLEVEL:debug
     debug: _env:DEBUG:true
     search_backend: _env:SEARCH_BACKEND:sqlalchemy
 # This flavor is used by unit tests
 test:
+
     <<: *dev
     index_endpoint: https://registry-stage.hub.docker.com
     standalone: true
@@ -136,6 +141,7 @@ test:
 # To specify another flavor, set the environment variable SETTINGS_FLAVOR
 # $ export SETTINGS_FLAVOR=prod
 prod:
+
     <<: *jssstorage
     storage_path: _env:STORAGE_PATH:/prod
 
