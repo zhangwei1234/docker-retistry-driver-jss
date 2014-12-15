@@ -11,7 +11,7 @@ docker-registry 安装
     sudo apt-get install build-essential python-dev libevent-dev python-pip libssl-dev
     sudo pip install liblzma-dev
     sudo pip install libevent1-dev
-
+    
  1.2 创建目录
     mkdir -p /export/service
     mkdir -p /export/home/jae
