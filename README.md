@@ -139,7 +139,7 @@ test:
     standalone: true
     storage_path: _env:STORAGE_PATH:./tmp/test
 # To specify another flavor, set the environment variable SETTINGS_FLAVOR
-# $ export SETTINGS_FLAVOR=prod
+# $ export SETTINGS_FLAVOR=jssstorage
 prod:
 
     <<: *jssstorage
